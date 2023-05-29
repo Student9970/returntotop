@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return To Top</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .container {
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 64px;
+        }
+
+        .container:nth-child(1) {
+            background-color: rgb(253, 91, 91);
+        }
+
+        .container:nth-child(2) {
+            background-color: rgb(212, 60, 212);
+        }
+
+        .container:nth-child(3) {
+            background-color: rgb(54, 54, 225);
+        }
+
+        .container:nth-child(4) {
+            background-color: rgb(215, 191, 58);
+        }
+
+        .container:nth-child(5) {
+            background-color: #000;
+        }
+
+        a {
+            width: 30%;
+            height: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        img {
+            position: absolute;
+        }
+
+        img:nth-child(1) {
+            width: 100%;
+            animation: reverseRotate 8s linear infinite;
+        }
+
+        img:nth-child(2) {
+            width: 60%;
+            animation: rotate 8s linear infinite;
+        }
+
+        a:hover .rtry {
+            animation: rotate 1.5s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+
+            }
+        }
+
+        @keyframes reverseRotate {
+            0% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">HOME</div>
+    <div class="container">1</div>
+    <div class="container">2</div>
+    <div class="container">3</div>
+    <div class="container">
+        <a href="#">
+            <img src="./rtrWhite.png" alt="Return to top written in white">
+            <img src="./rtrYellow.png" class="rtry" alt="Return to top written in yellow">
+        </a>
+    </div>
+
+</body>
+
+</html>
